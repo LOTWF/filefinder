@@ -9,6 +9,6 @@ def filefinder(root,substr,exception=''):
     filelst=[]
     for i in os.walk(root):
         for j in i[2]:
-            if substr in j and exception not in i[0]:
+            if substr in j and exception!='' and exception not in i[0]:
                 filelst.append(i[0]+os.sep+j)
     return filelst
